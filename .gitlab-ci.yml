@@ -1,0 +1,29 @@
+---
+services:
+  - docker:dind
+
+variables:
+  IMAGE_NAME: ${CI_REGISTRY}/$CI_PROJECT_PATH
+  IMAGE_TAG: ${CI_COMMIT_REF_NAME}_${CI_COMMIT_SHA}
+  DOCKER_DRIVER: overlay2
+  DOCKER_HOST: tcp://docker:2375/
+
+stages:
+  - preflight
+  - build
+
+docker lint:
+  stage: preflight
+  image: hadolint/hadolint:latest-debian
+  script:
+    - hadolint Dockerfile
+
+build:
+  stage: build
+  image: docker:latest
+  before_script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+  script:
+    - docker pull ${CI_REGISTRY_IMAGE}:latest || true
+    - docker build -t ${CI_REGISTRY_IMAGE}:${IMAGE_TAG} .
+    - docker push ${CI_REGISTRY_IMAGE}:${IMAGE_TAG}
