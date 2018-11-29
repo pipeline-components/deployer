@@ -111,7 +111,7 @@ SOFTWARE.
 [dockerhub]: https://hub.docker.com/r/pipelinecomponents/deployer
 [license-shield]: https://img.shields.io/badge/License-MIT-green.svg
 [mjrider]: https://gitlab.com/mjrider
-[gitlabci-shield]: https://gitlab.com/pipeline-components/deployer/badges/master/build.svg
+[gitlabci-shield]: https://img.shields.io/gitlab/pipeline/pipeline-components/deployer.svg
 [gitlabci]: https://gitlab.com/pipeline-components/deployer/commits/master
 [issue]: https://gitlab.com/pipeline-components/deployer/issues
 [keepchangelog]: http://keepachangelog.com/en/1.0.0/
