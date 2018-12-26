@@ -12,6 +12,7 @@ RUN \
     apk --no-cache add rsync=3.1.3-r1 openssh-client=7.7_p1-r3
 COPY --from=build /app/ /app/
 
+WORKDIR /code/
 # Build arguments
 ARG BUILD_DATE
 ARG BUILD_REF
