@@ -9,7 +9,7 @@ ENV PATH "$PATH:/app/vendor/bin/"
 COPY ssh-config /root/.ssh/config
 RUN \
     chmod u=r,go= /root/.ssh/config && \
-    apk --no-cache add rsync=3.1.3-r1 openssh-client=7.9_p1-r4 git=2.20.1-r0
+    apk --no-cache add rsync=3.1.3-r1 openssh-client=7.9_p1-r5 git=2.20.1-r0
 COPY --from=build /app/ /app/
 
 WORKDIR /code/
