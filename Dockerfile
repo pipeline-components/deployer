@@ -4,7 +4,7 @@ COPY app/ /app/
 RUN composer install --no-interaction --no-scripts --no-progress --optimize-autoloader 
 WORKDIR /app/
 
-FROM php:7.3.5-alpine3.9
+FROM php:7.3.6-alpine3.9
 ENV PATH "$PATH:/app/vendor/bin/"
 COPY ssh-config /root/.ssh/config
 RUN \
