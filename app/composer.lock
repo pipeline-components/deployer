@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "10168b43fa88d8df8a4ac0cf19a1da30",
+    "content-hash": "3a06b98a0b9c7ae7a6c75cb4f20f585e",
     "packages": [
         {
             "name": "deployer/deployer",
@@ -116,20 +116,26 @@
         },
         {
             "name": "deployer/recipes",
-            "version": "6.1.6",
+            "version": "6.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/deployphp/recipes.git",
-                "reference": "3054c925628af1d514baa3f94c58abd53c62863c"
+                "reference": "84b3229c518c094a950e1fe785b7b8f9598770fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/deployphp/recipes/zipball/3054c925628af1d514baa3f94c58abd53c62863c",
-                "reference": "3054c925628af1d514baa3f94c58abd53c62863c",
+                "url": "https://api.github.com/repos/deployphp/recipes/zipball/84b3229c518c094a950e1fe785b7b8f9598770fe",
+                "reference": "84b3229c518c094a950e1fe785b7b8f9598770fe",
                 "shasum": ""
+            },
+            "require": {
+                "php": "~7.0"
             },
             "replace": {
                 "deployer/recipes": "self.version"
+            },
+            "require-dev": {
+                "deployer/deployer": "^6.3"
             },
             "type": "library",
             "autoload": {
@@ -163,7 +169,7 @@
                 "slack",
                 "yarn"
             ],
-            "time": "2018-09-15T02:39:00+00:00"
+            "time": "2019-06-27T06:47:18+00:00"
         },
         {
             "name": "pimple/pimple",

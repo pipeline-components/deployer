@@ -2,6 +2,6 @@
     "type": "application",
     "require": {
         "deployer/deployer": "6.4.3",
-        "deployer/recipes": "6.1.6"
+        "deployer/recipes": "6.2.2"
     }
 }
