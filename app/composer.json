@@ -1,7 +1,7 @@
 {
     "type": "application",
     "require": {
-        "deployer/deployer": "6.6.0",
+        "deployer/deployer": "6.7.3",
         "deployer/recipes": "6.2.2"
     }
 }
