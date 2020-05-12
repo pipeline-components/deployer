@@ -6,7 +6,7 @@ WORKDIR /app/
 
 FROM pipelinecomponents/base-entrypoint:0.2.0 as entrypoint
 
-FROM php:7.4.4-alpine3.10
+FROM php:7.4.5-alpine3.10
 COPY --from=entrypoint /entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 ENV DEFAULTCMD dep
@@ -15,7 +15,7 @@ ENV PATH "$PATH:/app/vendor/bin/"
 COPY ssh-config /root/.ssh/config
 RUN \
     chmod u=r,go= /root/.ssh/config && \
-    apk --no-cache add rsync=3.1.3-r1 openssh-client=8.1_p1-r0 git=2.22.2-r0
+    apk --no-cache add rsync=3.1.3-r1 openssh-client=8.1_p1-r0 git=2.22.4-r0
 COPY --from=build /app/ /app/
 
 WORKDIR /code/
