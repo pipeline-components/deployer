@@ -23,7 +23,7 @@ the default deployer recipes
 # Deploy templates
 .deploy: &deploy
   stage: deploy
-  image: pipelinecomponents/deployer:latest
+  image: registry.gitlab.com/pipeline-components/deployer:latest
   dependencies: []
   before_script:
     - eval $(ssh-agent -s)
