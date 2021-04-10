@@ -1,8 +1,10 @@
-FROM composer:1.10.19 as build
+FROM composer:1.10.19 as composer
 
-COPY app/ /app/
-RUN composer install --no-interaction --no-scripts --no-progress --optimize-autoloader
+FROM php:7.4.6-alpine3.10 as build
+COPY --from=composer /usr/bin/composer /usr/bin/composer
 WORKDIR /app/
+COPY app/ /app/
+RUN chmod a+rx /usr/bin/composer && /usr/bin/composer install --no-interaction --no-scripts --no-progress --optimize-autoloader
 
 FROM pipelinecomponents/base-entrypoint:0.4.0 as entrypoint
 
@@ -13,9 +15,10 @@ ENV DEFAULTCMD dep
 
 ENV PATH "$PATH:/app/vendor/bin/"
 COPY ssh-config /root/.ssh/config
+# hadolint ignore=DL3018
 RUN \
     chmod u=r,go= /root/.ssh/config && \
-    apk --no-cache add rsync=3.1.3-r1 openssh-client=8.1_p1-r0 git=2.22.4-r0
+    apk --no-cache add rsync openssh-client git
 COPY --from=build /app/ /app/
 
 WORKDIR /code/
