@@ -3,5 +3,8 @@
     "require": {
         "deployer/deployer": "6.8.0",
         "deployer/recipes": "6.2.2"
-    }
+    },
+    "license": "MIT",
+    "description": "Pipeline Components Deployer",
+    "name": "pipelinecomponents/deployer"
 }
