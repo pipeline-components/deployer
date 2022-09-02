@@ -1,8 +1,7 @@
 {
     "type": "application",
     "require": {
-        "deployer/deployer": "7.0.1",
-        "deployer/recipes": "6.2.2"
+        "deployer/deployer": "7.0.1"
     },
     "license": "MIT",
     "description": "Pipeline Components Deployer",
