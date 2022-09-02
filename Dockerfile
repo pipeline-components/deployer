@@ -18,7 +18,7 @@ COPY ssh-config /root/.ssh/config
 # hadolint ignore=DL3018
 RUN \
     chmod u=r,go= /root/.ssh/config && \
-    apk --no-cache add rsync openssh-client git
+    apk --no-cache add bash rsync openssh-client git
 COPY --from=build /app/ /app/
 
 WORKDIR /code/
