@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "93ea415988cedbc59a2f84ebb7e990ad",
+    "content-hash": "569fe86da5cea83eea390bb43fa384f5",
     "packages": [
         {
             "name": "deployer/deployer",
-            "version": "v7.1.4",
+            "version": "v7.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/deployphp/deployer.git",
-                "reference": "c4a80010830d793dc09f55c9d1e211250c3cc335"
+                "reference": "61314b16a776da3ba332ee0390e999a361431e52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/deployphp/deployer/zipball/c4a80010830d793dc09f55c9d1e211250c3cc335",
-                "reference": "c4a80010830d793dc09f55c9d1e211250c3cc335",
+                "url": "https://api.github.com/repos/deployphp/deployer/zipball/61314b16a776da3ba332ee0390e999a361431e52",
+                "reference": "61314b16a776da3ba332ee0390e999a361431e52",
                 "shasum": ""
             },
             "bin": [
@@ -47,7 +47,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-02-05T20:09:03+00:00"
+            "time": "2023-03-01T20:16:58+00:00"
         }
     ],
     "packages-dev": [],
